@@ -71,7 +71,7 @@ lcd_instruction:
     rts
 
 print_char:
-    jsr lcd_busy   ; waiting until busy flag is off
+    jsr lcd_wait   ; waiting until busy flag is off
     sta PORTB
     lda #RS
     sta PORTA
